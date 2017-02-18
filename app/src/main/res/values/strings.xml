@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="gotob">gotob</string>
+    <string name="gotoc">gotoc</string>
+    <string name="backtom">backtom</string>
+    <string name="BackTob">backtob</string>
+    <string name="toasttext">login and pwd must be the same</string>
+    <string name="codetext">code not the same</string>
+</resources>
+
