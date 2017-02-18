@@ -16,6 +16,7 @@
         android:id="@+id/gotob"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
         android:layout_marginEnd="63dp" />
 
     <EditText
@@ -23,8 +24,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/password"
+        android:id="@+id/password"s
         android:hint="password"
+        android:layout_centerInParent="true"
         android:layout_below="@+id/login"
         android:layout_alignEnd="@+id/gotob" />
 
@@ -33,18 +35,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/login"
         android:hint="Login"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_below="@+id/gotob"
         android:layout_alignStart="@+id/valider"
         android:layout_marginTop="49dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="valider"
-        android:id="@+id/valider"
-        android:layout_below="@+id/password"
-        android:layout_toStartOf="@+id/gotob"
-        android:layout_marginTop="63dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -53,6 +48,18 @@
         android:ems="10"
         android:id="@+id/code"
         android:hint="code"
+        android:layout_centerInParent="true"
         android:layout_below="@+id/password"
         android:layout_alignStart="@+id/password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="valider"
+        android:id="@+id/valider"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/password"
+        android:layout_toStartOf="@+id/gotob"
+        android:layout_marginTop="63dp" />
+
 </RelativeLayout>

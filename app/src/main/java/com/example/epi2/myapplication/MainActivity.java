@@ -31,50 +31,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
-        switch (v.getId()) {
-            case R.id.valider: {
-                if (login.getText().toString().equals(password.getText().toString()))
-                {
-                  if (code.getText().toString().equals("azerty")){
-                      Intent myInten = new Intent(MainActivity.this, Main2Activity.class);
-                      startActivity(myInten);
-                  }
-                   else
-                  {
-                      int duration = Toast.LENGTH_SHORT;
-                      Toast toast = Toast.makeText(MainActivity.this, getResources().getString(R.string.codetext), duration);
-                      toast.show();
-                  }
-                }
-                else {
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(MainActivity.this, getResources().getString(R.string.toasttext), duration);
-                    toast.show();
-                }
-
-
-                break;
+        if(login.getText().toString().equals("")||password.getText().toString().equals("")||code.getText().toString().equals("")){
+            if (login.getText().toString().equals("")){
+                login.setVisibility(View.VISIBLE);
             }
-            case R.id.gotob: {
-
-                Intent myInten = new Intent(MainActivity.this, Main2Activity.class);
-                startActivity(myInten);
-                break;
+            if (password.getText().toString().equals("")){
             }
-
-
-            default: {
-                finish();
-                break;
+            if (code.getText().toString().equals("")){
             }
         }
-    }
-    public Array checkfield (EditText field,String textreturn ){
-        Array fields
-        if (field.getText().toString().equals("")){
-            return true;
+        else{
+
+            switch (v.getId()) {
+                case R.id.valider: {
+                    if (login.getText().toString().equals(password.getText().toString()))
+                    {
+                        if (code.getText().toString().equals("azerty")){
+                            Intent myInten = new Intent(MainActivity.this, Main2Activity.class);
+                            startActivity(myInten);
+                        }
+                        else
+                        {
+                            int duration = Toast.LENGTH_SHORT;
+                            Toast toast = Toast.makeText(MainActivity.this, getResources().getString(R.string.codetext), duration);
+                            toast.show();
+                        }
+                    }
+                    else {
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(MainActivity.this, getResources().getString(R.string.toasttext), duration);
+                        toast.show();
+                    }
+
+
+                    break;
+                }
+                case R.id.gotob: {
+
+                    Intent myInten = new Intent(MainActivity.this, Main2Activity.class);
+                    startActivity(myInten);
+                    break;
+                }
+
+
+                default: {
+                    finish();
+                    break;
+                }
+            }
         }
-    }
+            }
 
 }
